@@ -2,72 +2,72 @@
 
 <img src="app/data/icon.svg" width="128" height="128" alt="scrcpy" align="right" />
 
-_pronounced "**scr**een **c**o**py**"_
+_pronunciado "**scr**een **c**o**py**"_
 
-This application mirrors Android devices (video and audio) connected via
-USB or [over TCP/IP](doc/connection.md#tcpip-wireless), and allows to control the
-device with the keyboard and the mouse of the computer. It does not require any
-_root_ access. It works on _Linux_, _Windows_ and _macOS_.
+Esta aplicación refleja los dispositivos Android (vídeo y audio) conectados a través de
+USB o [sobre TCP/IP](doc/connection.md#tcpip-wireless), y permite controlar el
+dispositivo con el teclado y el ratón del ordenador. No requiere ningún
+_acceso raíz. Funciona en _Linux_, _Windows_ y _macOS_.
 
 ![screenshot](assets/screenshot-debian-600.jpg)
 
-It focuses on:
+Se enfoca en:
 
- - **lightness**: native, displays only the device screen
- - **performance**: 30~120fps, depending on the device
- - **quality**: 1920×1080 or above
- - **low latency**: [35~70ms][lowlatency]
- - **low startup time**: ~1 second to display the first image
- - **non-intrusiveness**: nothing is left installed on the Android device
- - **user benefits**: no account, no ads, no internet required
- - **freedom**: free and open source software
+ - **ligereza**: nativa, muestra solo la pantalla del dispositivo
+ - **rendimiento**: 30~120 fps, dependiendo del dispositivo
+ - **calidad**: 1920×1080 o superior
+ - **baja latencia**: [35~70ms][baja latencia]
+ - **tiempo de inicio bajo**: ~1 segundo para mostrar la primera imagen
+ - **no intrusión**: no queda nada instalado en el dispositivo Android
+ - **beneficios para el usuario**: sin cuenta, sin anuncios, no se requiere Internet
+ - **libertad**: software gratuito y de código abierto
 
 [lowlatency]: https://github.com/Genymobile/scrcpy/pull/646
 
-Its features include:
- - [audio forwarding](doc/audio.md) (Android 11+)
- - [recording](doc/recording.md)
- - mirroring with [Android device screen off](doc/device.md#turn-screen-off)
- - [copy-paste](doc/control.md#copy-paste) in both directions
- - [configurable quality](doc/video.md)
- - [camera mirroring](doc/camera.md) (Android 12+)
- - [mirroring as a webcam (V4L2)](doc/v4l2.md) (Linux-only)
- - [physical keyboard/mouse simulation (HID)](doc/hid-otg.md)
- - [OTG mode](doc/hid-otg.md#otg)
- - and more…
+Sus características incluyen:
+ - [reenvío de audio] (doc/audio.md) (Android 11+)
+ - [grabación] (doc/recording.md)
+ - duplicación con [pantalla del dispositivo Android apagada] (doc/device.md#turn-screen-off)
+ - [copiar y pegar](doc/control.md#copiar y pegar) en ambas direcciones
+ - [calidad configurable](doc/video.md)
+ - [duplicación de cámara] (doc/camera.md) (Android 12+)
+ - [duplicación como cámara web (V4L2)](doc/v4l2.md) (solo Linux)
+ - [simulación física de teclado/ratón (HID)] (doc/hid-otg.md)
+ - [Modo OTG](doc/hid-otg.md#otg)
+ - y más…
 
-## Prerequisites
+## Requisitos previos
 
-The Android device requires at least API 21 (Android 5.0).
+El dispositivo Android requiere al menos API 21 (Android 5.0).
 
-[Audio forwarding](doc/audio.md) is supported for API >= 30 (Android 11+).
+[Reenvío de audio](doc/audio.md) es compatible con API >= 30 (Android 11+).
 
-Make sure you [enabled USB debugging][enable-adb] on your device(s).
+Asegúrese de [habilitar la depuración USB] [enable-adb] en su(s) dispositivo(s).
 
 [enable-adb]: https://developer.android.com/studio/debug/dev-options#enable
 
-On some devices, you also need to enable [an additional option][control] `USB
-debugging (Security Settings)` (this is an item different from `USB debugging`)
-to control it using a keyboard and mouse. Rebooting the device is necessary once
-this option is set.
+En algunos dispositivos, también es necesario habilitar [una opción adicional][control] `USB
+depuración (Configuración de seguridad)` (este es un elemento diferente de `depuración USB`)
+para controlarlo mediante un teclado y un ratón. Es necesario reiniciar el dispositivo una vez.
+esta opción está configurada.
 
 [control]: https://github.com/Genymobile/scrcpy/issues/70#issuecomment-373286323
 
-Note that USB debugging is not required to run scrcpy in [OTG
-mode](doc/hid-otg.md#otg).
+Tenga en cuenta que no se requiere la depuración USB para ejecutar scrcpy en [OTG
+modo](doc/hid-otg.md#otg).
 
 
-## Get the app
+## Obtener la aplicación
 
  - [Linux](doc/linux.md)
  - [Windows](doc/windows.md)
  - [macOS](doc/macos.md)
 
 
-## User documentation
+## Documentación del usuario
 
-The application provides a lot of features and configuration options. They are
-documented in the following pages:
+La aplicación proporciona muchas funciones y opciones de configuración. Ellos son
+documentado en las siguientes páginas:
 
  - [Connection](doc/connection.md)
  - [Video](doc/video.md)
@@ -83,58 +83,58 @@ documented in the following pages:
  - [Shortcuts](doc/shortcuts.md)
 
 
-## Resources
+## Recursos
 
- - [FAQ](FAQ.md)
- - [Translations][wiki] (not necessarily up to date)
- - [Build instructions](doc/build.md)
- - [Developers](doc/develop.md)
+ - [Preguntas frecuentes](Preguntas frecuentes.md)
+ - [Traducciones][wiki] (no necesariamente actualizado)
+ - [Instrucciones de compilación] (doc/build.md)
+ - [Desarrolladores] (doc/develop.md)
 
 [wiki]: https://github.com/Genymobile/scrcpy/wiki
 
 
-## Articles
+## Artículos
 
-- [Introducing scrcpy][article-intro]
-- [Scrcpy now works wirelessly][article-tcpip]
-- [Scrcpy 2.0, with audio][article-scrcpy2]
+- [Presentando scrcpy][artículo-introducción]
+- [Scrcpy ahora funciona de forma inalámbrica][artículo-tcpip]
+- [Scrcpy 2.0, con audio][artículo-scrcpy2]
 
-[article-intro]: https://blog.rom1v.com/2018/03/introducing-scrcpy/
-[article-tcpip]: https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/
-[article-scrcpy2]: https://blog.rom1v.com/2023/03/scrcpy-2-0-with-audio/
+[introducción del artículo]: https://blog.rom1v.com/2018/03/introduciendo-scrcpy/
+[artículo-tcpip]: https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wireless/
+[artículo-scrcpy2]: https://blog.rom1v.com/2023/03/scrcpy-2-0-with-audio/
 
-## Contact
+## Contacto
 
-If you encounter a bug, please read the [FAQ](FAQ.md) first, then open an [issue].
+Si encuentra un error, lea primero las [Preguntas frecuentes] (FAQ.md) y luego abra un [problema].
 
-[issue]: https://github.com/Genymobile/scrcpy/issues
+[problema]: https://github.com/Genymobile/scrcpy/issues
 
-For general questions or discussions, you can also use:
+Para preguntas o discusiones generales, también puede utilizar:
 
  - Reddit: [`r/scrcpy`](https://www.reddit.com/r/scrcpy)
  - Twitter: [`@scrcpy_app`](https://twitter.com/scrcpy_app)
 
 
-## Donate
+## Donar
 
-I'm [@rom1v](https://github.com/rom1v), the author and maintainer of _scrcpy_.
+Soy [@rom1v](https://github.com/rom1v), el autor y mantenedor de _scrcpy_.
 
-If you appreciate this application, you can [support my open source
-work][donate]:
- - [GitHub Sponsors](https://github.com/sponsors/rom1v)
+Si aprecia esta aplicación, puede [apoyar mi código abierto
+trabajar][donar]:
+ - [Patrocinadores de GitHub](https://github.com/sponsors/rom1v)
  - [Liberapay](https://liberapay.com/rom1v/)
- - [PayPal](https://paypal.me/rom2v)
+ -[PayPal](https://paypal.me/rom2v)
 
-[donate]: https://blog.rom1v.com/about/#support-my-open-source-work
+[donar]: https://blog.rom1v.com/about/#support-my-open-source-work
 
-## Licence
+## Licencia
 
     Copyright (C) 2018 Genymobile
     Copyright (C) 2018-2023 Romain Vimont
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+    Licenciado bajo la Licencia Apache, Versión 2.0 (la "Licencia");
+    no puede utilizar este archivo excepto de conformidad con la Licencia.
+    Puede obtener una copia de la Licencia en
 
         http://www.apache.org/licenses/LICENSE-2.0
 
